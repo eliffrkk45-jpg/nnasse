@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07152f">
+  <meta name="description" content="Nasse Biology - etkileşimli biyoloji öğrenme laboratuvarı">
+  <title>Nasse Biology | Los Galacticos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#ana" aria-label="Nasse Biology ana sayfa">
+      <span class="brand-mark">N<span>+</span></span>
+      <span><b>Nasse Biology</b><small>ETKİLEŞİMLİ BİYOLOJİ EVRENİ</small></span>
+    </a>
+    <nav>
+      <a href="#siniflar">Sınıflar</a><a href="#laboratuvar">3B Laboratuvar</a><a href="#gorevler">Görevler</a>
+    </nav>
+    <button id="openLogin" class="button button-outline">Giriş yap</button>
+  </header>
+
+  <main id="ana">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> BİYOLOJİYİ KEŞFET • DENE • ÖĞREN</div>
+        <p class="team-tag">— Los Galacticos —</p>
+        <h1>Bilimi <span>keşfet.</span><br>Sinir sistemini çöz.</h1>
+        <p class="hero-desc">Hücreden beyne uzanan yolculukta 3B modelleri keşfet, görevleri tamamla ve biyoloji bilgini geliştir.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#siniflar">Keşfe başla <span>↗</span></a>
+          <a class="button button-ghost" href="#laboratuvar">3B laboratuvarı aç</a>
+        </div>
+        <div class="hero-credit">Barış Köseoğlu'nun Öğrencisi Tarafından Yapılmıştır :)</div>
+        <div class="stats">
+          <div><strong id="scoreTop">0</strong><small>Toplam puan</small></div>
+          <div><strong id="doneTop">0</strong><small>Tamamlanan görev</small></div>
+          <div><strong>3B</strong><small>Etkileşimli modeller</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="brain-glow">🧠</div>
+        <div class="floating-chip chip-a">⚡ Sinir iletimi</div>
+        <div class="floating-chip chip-b">✦ Hücresel enerji</div>
+        <div class="floating-chip chip-c">+3B keşif</div>
+        <div class="visual-caption"><span class="live-dot"></span> LABORATUVAR HAZIR <small>Bilgi, etkileşimle kalıcı olur.</small></div>
+      </div>
+    </section>
+
+    <section class="section" id="siniflar">
+      <div class="section-heading"><div><p class="eyebrow">ÖĞRENME YOLCULUĞUN</p><h2>Sınıfını seç, <span>keşfe başla.</span></h2></div><p>Konular sınıf düzeylerine ayrıldı. Son aşamada tüm bilgileri gerçek yaşam senaryolarında birleştireceksin.</p></div>
+      <div class="class-grid">
+        <article class="class-card class-nine"><div class="class-icon">🔬</div><div class="class-number">01 / TEMEL</div><h3>9. Sınıf</h3><p>Hücre, zar ve canlılarda yapı-görev ilişkisi için temel oluştur.</p><div class="tag-list"><span>Hücre yapısı</span><span>Hücre zarı</span><span>Yapı ve görev</span></div><button class="text-button" data-class="9">Konuları keşfet <span>→</span></button></article>
+        <article class="class-card class-ten"><div class="class-icon">⚡</div><div class="class-number">02 / ENERJİ</div><h3>10. Sınıf</h3><p>Hücrelerin enerji ihtiyacını ve ATP'nin görevini bağlam içinde öğren.</p><div class="tag-list"><span>ATP</span><span>Hücresel solunum</span><span>Enerji</span></div><button class="text-button" data-class="10">Konuları keşfet <span>→</span></button></article>
+        <article class="class-card class-eleven"><div class="class-icon">🧠</div><div class="class-number">03 / SİNİR SİSTEMİ</div><h3>11. Sınıf</h3><p>Reseptörlerden sinapslara kadar sinir sistemini modelle ve test et.</p><div class="tag-list"><span>Nöron</span><span>İmpuls</span><span>Beyin ve omurilik</span></div><button class="text-button" data-class="11">Konuları keşfet <span>→</span></button></article>
+      </div>
+      <div id="classDetails" class="details-panel hidden" aria-live="polite"></div>
+    </section>
+
+    <section class="section lab-section" id="laboratuvar">
+      <div class="section-heading"><div><p class="eyebrow">DOKUN • DÖNDÜR • KEŞFET</p><h2>3B <span>keşif laboratuvarı</span></h2></div><p>Modeli fareyle veya parmağınla döndür. Yakınlaştırıp uzaklaştır. Aşağıdaki yapı adımlarına dokunarak Türkçe bilgi kartlarını aç.</p></div>
+      <div class="lab-layout">
+        <div class="viewer-card">
+          <div class="viewer-top"><div><span class="viewer-live"></span><b id="modelTitle">İnsan beyni</b></div><span class="viewer-badge">ETKİLEŞİMLİ 3B</span></div>
+          <div class="model-tabs" role="tablist" aria-label="3B model seçimi">
+            <button class="model-tab active" data-model="brain">🧠 Beyin</button>
+            <button class="model-tab" data-model="cell">🧫 Hücre</button>
+            <button class="model-tab" data-model="neuron">⚡ Nöron</button>
+            <button class="model-tab" data-model="spine">🦴 Omurilik</button>
+          </div>
+          <div class="sketchfab-wrap">
+            <iframe id="modelFrame" title="Etkileşimli 3B biyoloji modeli" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen
+              src="https://sketchfab.com/models/0aa0e33c5c854d1bab7bac9e1c7acaec/embed?autostart=1&ui_infos=0&ui_watermark=1"></iframe>
+          </div>
+          <div class="viewer-help"><span>↔</span> Döndürmek için sürükle <span>⌕</span> Yakınlaştırmak için kaydır veya iki parmak kullan</div>
+          <p class="model-credit" id="modelCredit">Model: FrankJohansson · Sketchfab · CC BY</p>
+        </div>
+        <aside class="info-side">
+          <div class="info-card">
+            <div class="card-kicker">SEÇİLİ YAPI</div>
+            <div class="info-symbol" id="infoSymbol">🧠</div>
+            <h3 id="infoTitle">Beyin</h3>
+            <p id="infoText">Beyin; duyulardan gelen bilgileri değerlendirir, hareketleri ve birçok yaşamsal işlevi düzenler.</p>
+            <div class="fact-line"><span>✦</span><p id="infoFact">Beyin, merkezi sinir sisteminin bir parçasıdır.</p></div>
+          </div>
+          <div class="structure-list">
+            <div class="card-kicker">TÜRKÇE ANATOMİ KARTLARI <span>Seçerek incele</span></div>
+            <p class="structure-hint">Modelin içindeki İngilizce etiketleri değiştirmeden, seçtiğin modele ait Türkçe yapı kartları burada açılır.</p>
+            <div id="structureItems"></div>
+          </div>
+        </aside>
+      </div>
+      <p class="notice">Bilgi: Bu sürümde 3B model, Sketchfab görüntüleyicisi içinde çalışır. Bilgi kartları Türkçedir; kart seçimi modeli otomatik olarak parçalarına ayırmaz. Gerçek parça seçimi, modelin içerdiği ayrı nesnelere ve görüntüleyici özelliklerine bağlıdır.</p>
+    </section>
+
+    <section class="section" id="gorevler">
+      <div class="section-heading"><div><p class="eyebrow">BİLGİNİ SINAYALIM</p><h2>Görevler ve <span>puanlar</span></h2></div><p>Sınıfını seçtiğinde o düzeye ait konu anlatımları ve ayrı soru seti açılır. Sınıf seçmeden genel soruları da çözebilirsin. Her doğru yanıt 10 puandır.</p></div>
+      <div class="game-layout">
+        <div class="quiz-card">
+          <div class="quiz-top"><span class="quiz-label">HIZLI GÖREV</span><span id="questionCount">GENEL SORULAR</span></div>
+          <div class="progress-track"><div id="quizProgress" class="progress-fill"></div></div>
+          <h3 id="questionText">Nöronda impulsun hücre gövdesinden uzağa taşınmasında temel rolü hangi yapı üstlenir?</h3>
+          <div id="answers" class="answers"></div>
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+          <button id="nextQuestion" class="button button-primary" disabled>Sonraki soru →</button>
+        </div>
+        <div class="score-card"><div class="score-orb">✦</div><p class="eyebrow">KEŞİF PUANIN</p><div class="score-value"><span id="scoreValue">0</span><small>puan</small></div><div class="score-track"><div id="scoreBar" class="progress-fill"></div></div><p class="score-note">Her doğru yanıt <b>10 puan</b> kazandırır.</p><div class="achievement"><span>🏅</span><div><b>Meraklı araştırmacı</b><small id="achievementText">İlk görevini tamamla.</small></div></div><button id="resetProgress" class="button button-outline reset-button">İlerlemeyi sıfırla</button></div>
+      </div>
+    </section>
+
+    <section class="section context-section" id="baglam">
+      <div class="context-banner"><div><p class="eyebrow">SON AŞAMA • BİLGİLERİ BİRLEŞTİR</p><h2>Bağlam <span>laboratuvarı</span></h2><p>Bir refleks, enerji ihtiyacı ve sinir sistemi arasında bağlantı kur. Önce sınıf bölümlerini keşfet, sonra bu bütünleştirici senaryoya geç.</p><button class="button button-primary" id="startContext">Senaryoyu başlat →</button></div><div class="context-art">🧬<span>⚡</span><span>🧠</span></div></div>
+      <div id="contextBox" class="context-box hidden" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer><div class="footer-brand"><span class="brand-mark">N<span>+</span></span><b>Nasse Biology</b></div><p>Bilim, merakla büyür.</p><small>Los Galacticos · Barış Köseoğlu</small></footer>
+
+  <div class="modal-backdrop hidden" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <div class="login-modal">
+      <button class="modal-close" id="closeLogin" aria-label="Kapat">×</button>
+      <div class="brand-mark modal-mark">N<span>+</span></div><p class="eyebrow">NASSE BIOLOGY'YE KATIL</p><h2 id="loginTitle">Keşif yolculuğuna giriş yap</h2>
+      <p class="modal-desc">İlerlemeni hesabınla ilişkilendirmek için giriş yapabilirsin.</p>
+      <button id="googleLogin" class="button google-button"><span class="google-g">G</span> Google ile devam et</button>
+      <div class="or-line"><span>veya e-posta ile</span></div>
+      <form id="emailForm">
+        <label for="email">E-posta</label><input id="email" type="email" autocomplete="email" placeholder="ornek@eposta.com" required>
+        <label for="password">Şifre</label><input id="password" type="password" autocomplete="current-password" minlength="6" placeholder="En az 6 karakter" required>
+        <div class="form-actions"><button class="button button-primary" type="submit" id="emailLogin">Giriş yap</button><button class="button button-outline" type="button" id="emailRegister">Hesap oluştur</button></div>
+      </form>
+      <p id="authMessage" class="auth-message" aria-live="polite">Giriş sistemi için Firebase ayarlarını eklemen gerekir.</p>
+      <button id="logoutButton" class="text-button hidden" type="button">Çıkış yap</button>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
